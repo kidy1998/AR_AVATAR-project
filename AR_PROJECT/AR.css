@@ -1,0 +1,74 @@
+#modelviewer {
+  height: 400px;
+  width: 100%;
+  position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);z-index:100;
+}
+
+#videoInput {
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: calc(100% - 60px);
+  padding: 0 30px;
+  height: 50px;
+  border-bottom: 1px solid black;
+}
+header h1 {
+  font-weight: bold;
+  font-size: 20px;
+  padding-right: 30px;
+}
+header .breakLine {
+  content: "";
+  height: 50px;
+  border: 1px solid black;
+}
+.header-wrapper {
+  width: 83%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-wrapper .button-wrap{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.header-wrapper .button-wrap input {
+
+}
+.header-wrapper .button-wrap button {
+  background-image: linear-gradient(
+      315deg,
+      #ffc4ec -10%,
+      #efdbfd 50%,
+      #ffedd6 110%
+  );
+  border: 1px solid #333;
+  border-radius: 5px;
+  margin-left: 20px;
+  height: 30px;
+  width: 70px;
+}
+header .menuList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30px;
+}
+header .menuList li:not(:first-child) {
+  padding-left: 25px
+}
+header .menuList li:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
+header .menuList li a {
+  color: #333;
+  text-decoration: none;
+}

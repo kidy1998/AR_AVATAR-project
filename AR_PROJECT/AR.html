@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="AR.css">
+</head>
+<body>
+<header>
+  <h1>Web_AR_Avatar</h1>
+  <span class="breakLine"></span>
+  <div class="header-wrapper">
+    <ul class="menuList">
+      <li><a href="main.html">Home</a></li>
+      <li><a href="createAvatar.html">Create</a></li>
+      <li><a href="AR.html">Load</a></li>
+    </ul>
+    <div class="button-wrap">
+      <input type="text" id="inputURL" placeholder="Paste Avatar URL">
+      <button onclick="getURL()">
+        <span class="text">Load</span>
+        <span class="shimmer"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+  <model-viewer id="modelviewer" alt="Ready Player Me Avatar"
+                src="@ViewData['Avatar_src']" shadow-intensity="1" camera-controls
+  touch-action="pan-y">
+  </model-viewer>
+  <video id="videoInput" width="100%"></video>
+
+
+
+  
+  <script>
+    navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+
+    //var constraints = { video: { facingMode: { exact: "environment" }, width: { exact: 395 }, height: { exact: 395 } }, audio: false };
+    var constraints = { audio: false, video: true };
+
+    var video = document.getElementById("videoInput");
+    document.querySelector( "video").style.height=String(window.innerHeight)+"px";
+    function successCallback(stream) {
+      video.srcObject = stream;
+      video.play();
+    }
+
+    function errorCallback(error) {
+      console.log(error);
+    }
+    navigator.getUserMedia(constraints, successCallback, errorCallback);
+  </script>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+  <script>
+    var viewer = document.getElementById('modelviewer');
+    function getURL () {
+      var url = document.getElementById('inputURL').value;
+      viewer.src = url;
+    }
+  </script>
+</body>
+</html>

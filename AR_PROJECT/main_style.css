@@ -1,0 +1,124 @@
+html, body, main {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+body {
+    background-image: url(images/main.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+main {
+    overflow: hidden;
+}
+.textGroup {
+    position: absolute;
+    top: 7vw;
+    left: 8.984vw;
+    color: white;
+}
+.textGroup h1{
+    font-size: 11.719vw;
+    color: aliceblue;
+    line-height: 1;
+    transition: all .3s ;
+}
+.textGroup h1:hover{
+    color: rgb(0, 248, 231);
+    font-size: 12.109vw;
+}
+.textGroup .information {
+    margin-top: 2vw;
+}
+.textGroup .information p{
+    font-size: 1.641vw;
+    line-height: 1.03;
+    color: aliceblue;
+    transition: all .3s ;
+}
+.textGroup .information:hover p{
+    color: rgb(0, 248, 231);
+    font-size: 1.875vw;
+}
+.buttonGroup a{
+    display: block;
+    line-height: 3.906vw;
+    color: aliceblue;
+    top: 40.625vw;
+    left: 8.984vw;
+    position: absolute;
+    background-color: black;
+    border: 0.156vw solid yellow;
+    outline: 0.078vw;
+    font-size: 1.563vw;
+    font-weight: bold;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: 3.906vw;
+    width: 15.625vw;
+    text-align: center;
+    transition: all .3s;
+    text-decoration: none;
+}
+.buttonGroup a:hover{
+    font-size: 1.875vw;
+}
+.backgroundGroup {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    background-image: url("images/avatar_circle.png"), url("images/avatar_circle2.png"), url("images/avatar_circle3.png");
+    background-size: 500px 900px, 500px 900px, 500px 900px;
+    background-position: right -47px top 365px, right 620px top 77px, right 4px bottom 202px;
+    background-repeat: no-repeat;
+}
+/*
+.backgroundGroup .avt1 {
+    width: 31.25vw;
+    height: 31.25vw;
+    border-radius: 50%;
+    right: -5%;
+    top: -5%;
+    position:fixed;
+}
+.backgroundGroup .avt2 {
+    width: 31.25vw;
+    height: 31.25vw;
+    border-radius: 50%;
+    right: 35.656vw;
+    top: 10.938vw;
+    position:fixed;
+}
+.backgroundGroup .avt3 {
+    width: 31.25vw;
+    height: 31.25vw;
+    border-radius: 50%;
+    right: -2.656vw;
+    bottom: -4%;
+    position:fixed;
+}*/
+
+
+.modal {
+   
+    position: fixed;
+    top: 7%;
+    left: 18%;
+    width: 70%;
+    height: 80%;
+    background-color: rgba(0, 0, 0, 0.5); /* 반투명 검은색 배경 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modalFrame {
+    width: 100%; /* 모달 내부 iframe 너비 */
+    height: 100%; /* 모달 내부 iframe 높이 */
+    border: none; /* 테두리 없음 */
+}
